@@ -1,0 +1,39 @@
+{% load static %}<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>University AI Chatbot – Demo</title>
+  <style>
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif; background: #f4f6f9; color: #1d1d1f; }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 16px; }
+    h1 { color: #1f4e78; margin-bottom: 8px; }
+    .card { background: #fff; border-radius: 12px; padding: 20px 24px; margin-top: 24px; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+    code { background: #eef1f5; padding: 2px 6px; border-radius: 4px; }
+    li { margin: 6px 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>University AI Chatbot</h1>
+    <p>Development demo page. Click the 💬 button in the bottom-right corner to chat.</p>
+
+    <div class="card">
+      <strong>Try asking:</strong>
+      <ul>
+        <li>Where can I pay my tuition fees?</li>
+        <li>When are the final exams?</li>
+        <li>តើបណ្ណាល័យបើកម៉ោងប៉ុន្មាន?</li>
+        <li>Something not in the knowledge base, to test the hand-off to staff</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <strong>Staff:</strong> manage FAQs, documents and hand-offs in the <a href="/admin/">admin panel</a>.<br>
+      <strong>API:</strong> <code>POST /api/chat/</code> with <code>{"message": "...", "session_id": "..."}</code>
+    </div>
+  </main>
+
+  <script src="{% static 'chat/widget.js' %}" data-title="University AI Chatbot" defer></script>
+</body>
+</html>
